@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subrat Dwivedi Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    
+    
+     
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #000;
+      background-color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Top Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: #111;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 60px);
+      max-width: 1200px;
+      z-index: 1000;
+      border-radius: 8px;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .logo img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .navbar .logo span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .navbar ul li a:hover {
+      color: #ff4747;
+    }
+
+    .navbar .download-btn {
+      padding: 8px 15px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14.5px;
+    }
+
+    .navbar .download-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Content Section */
+    .content-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      padding: 100px 20px;
+      padding-bottom: 1px;
+      max-width: 1200px;
+      /* Ensure the width matches the navbar's max width */
+      margin: 0 auto;
+      /* Center content */
+    }
+
+    .content-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #000;
+    }
+
+    .content-section p {
+      font-size: 18px;
+      max-width: 1200px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .content-section .section {
+      margin-bottom: 25px;
+      width: 1200px;
+    }
+
+    .content-section .section h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .content-section .section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .content-section .section ul li {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .project {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .project img {
+      border: 2px solid #000;
+      width: 100%;
+      max-width: 500px;
+      max-height: 300px;
+      border-radius: 10px;
+    }
+
+    .project-description {
+      max-width: 500px;
+    }
+
+    .project-description p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .container {
+      max-width: 1200px;
+      
+    }
+
+    .container h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .container p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .form-section {
+      margin-top: 20px;
+    }
+
+    .form-section h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-row input {
+      flex: 1;
+      padding: 15px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f5f7f9;
+      outline: none;
+    }
+
+    .form-row input:focus {
+      border-color: #333;
+    }
+
+    textarea {
+      width: 97.33%;
+      height: 150px;
+      padding: 15px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f5f7f9;
+      outline: none;
+      resize: none;
+    }
+
+    textarea:focus {
+      border-color: #333;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+    .hire-me {
+      font-size: 17px;
+      margin-bottom: 12px;
+      color: #ffffff;
+      background-color: #000000;
+      border: 2px solid #000;
+    }
+
+    .email {
+      font-size: 17px;
+      margin-bottom: 12px;
+      color: #000;
+      background-color: #ffffff;
+      border: 2px solid #000;
+    }
+    
+    .icon-container {
+            display: flex;
+            gap: 30px;
+            background-color: #e9ecef;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-top: 80px;
+            justify-content: center;  /* Centers the icons horizontally */
+            align-items: center; 
+        }
+        .icon {
+            font-size: 24px;
+            color: #000;
+            transition: color 0.3s ease;
+        }
+
+        .icon:hover {
+            color: #343a40;
+        }
+
+
+
+    
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <span>Subrat Dwivedi</span>
+    </div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skill</a></li>
+      <li><a href="#projects">Project</a></li>
+      <li><a href="#contacts">Contacts</a></li>
+    </ul>
+    <a href="#" class="download-btn">Download CV</a>
+  </div>
+
+  <!-- Content Sections -->
+  <div class="content-section" id="about">
+    <div class="section">
+      <h2>Hello, I'm Subrat Dwivedi</h2>
+      <p style="width: 700px;">Hi, I'm a B.Tech 1st-year student passionate about coding, web development, and problem-solving. I enjoy learning new technologies and creating projects that solve real-world problems. I'm excited about my journey in tech and looking forward to collaborating with others!</p>
+      <div class="buttons">
+        <button class="hire-me">Hire Me</button>
+        <button class="email">E-mail</button>
+      </div>
+      <hr style="border-top: 1px solid #ccc; margin: 1em 0;">
+      <h3 style="font-size: 22px;">Who Am I?</h3>
+      <p>I am a passionate developer specializing in web development. I have developed a strong foundation in front-end development, including HTML, CSS, and JavaScript. In addition, I have good knowledge of AWS, which helps me understand cloud computing and its role in enhancing modern web applications. I am always eager to learn, build new projects, and grow my technical skills to become a well-rounded software developer.</p>
+      <h3 style="font-size: 22px;">Experiences</h3>
+      <p>Since 2023, I've been actively working in web development, managing various projects for clients and collaborating with another developers.</p>
+      <h3>&#8226 Freelancer Developer</h3>
+      <p>As a Freelance Web Developer, I’ve worked on a variety of projects, creating custom websites and web applications tailored to clients' needs. My focus on responsive design and seamless user experiences has helped me build a strong online presence, attracting diverse clients. Through iterative testing and user feedback, I’ve continually refined my work to ensure optimal functionality and design.</p>
+      <h3>&#8226 AWS Club Member</h3>
+      <p>I am currently a member of the AWS Club at KIET Ghaziabad, where I actively enhance my AWS skills on a daily basis. I am preparing for the AWS certification, focusing on deepening my understanding of cloud services and best practices.</p>
+      <hr style="border-top: 1px solid #ccc; margin: 1em 0; margin-top: 40px;">
+    </div>
+    <div class="section" id="skills">
+      <h2 style="margin-top:2px;">Skills</h2>
+      <p>Explore the various skills I have aquired through my journey.</p>
+      <ul style="display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin-top: 20px;">
+        <li
+          style="width: 29.5%; margin-bottom: 10px; background-color: #ddd; padding: 10px; margin-right: 2%; text-align: center; border-radius: 5px;">
+          HTML</li>
+        <li
+          style="width: 29.5%; margin-bottom: 10px; background-color: #ddd; padding: 10px; margin-right: 2%; text-align: center; border-radius: 5px;">
+          CSS</li>
+        <li
+          style="width: 29.5%; margin-bottom: 10px; background-color: #ddd; padding: 10px; margin-right: 2%; text-align: center; border-radius: 5px;">
+          JavaScript</li>
+        <li
+          style="width: 29.5%; margin-bottom: 10px; background-color: #ddd; padding: 10px; margin-right: 2%; text-align: center; border-radius: 5px;">
+          React</li>
+        <li
+          style="width: 29.5%; margin-bottom: 10px; background-color: #ddd; padding: 10px; margin-right: 2%; text-align: center; border-radius: 5px;">
+          Amazon Web Service</li>
+        <li
+          style="width: 29.5%; margin-bottom: 10px; background-color: #ddd; padding: 10px; margin-right: 2%; text-align: center; border-radius: 5px;">
+          Git & GitHub</li>
+        <li
+          style="width: 29.5%; margin-bottom: 10px; background-color: #ddd; padding: 10px; margin-right: 2%; text-align: center; border-radius: 5px;">
+          Responsive Design</li>
+          <li
+          style="width: 29.5%; margin-bottom: 10px; background-color: #ddd; padding: 10px; margin-right: 2%; text-align: center; border-radius: 5px;">
+          Video Editing</li>
+          <li
+          style="width: 29.5%; margin-bottom: 10px; background-color: #ddd; padding: 10px; margin-right: 0; text-align: center; border-radius: 5px;">
+          UI/UX Design</li>
+      </ul>
+      <hr style="border-top: 1px solid #ccc; margin: 1em 0; margin-top: 50px;">
+    </div>
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+      <p>Explore the various projects I have worked on that demonstrate my skills and experience.</p>
+      <div class="project">
+        <img src="Resources/Screenshot from 2024-12-16 01-09-43.png" alt="Project Image">
+        <div class="project-description">
+          <h3>Personal Portfolio</h3>
+          <p>I created a simple portfolio to showcase my skills and projects. The portfolio includes a brief "About Me" section, where I introduce myself and highlight my strengths. There's a "Projects" section that displays the work I've done, with descriptions and links to live demos or code repositories. I also added a "Contact" section with a form to make it easy for visitors to reach out. The design is clean and responsive, ensuring it looks great on both desktop and mobile devices. The goal is to present my work professionally and make it easy for others to get in touch.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="Resources/aws logo.jpg" alt="Project Image">
+        <div class="project-description">
+          <h3>Website Deployment</h3>
+          <p>II deployed a basic website using AWS, leveraging services like Amazon S3 and CloudFront. The website files (HTML, CSS, and JavaScript) were uploaded to an S3 bucket, which serves as the storage and hosting solution. To ensure fast global delivery, I configured CloudFront as a Content Delivery Network (CDN) to cache and distribute the content. The website is accessible via a custom domain name, which I managed through Route 53. This deployment is scalable and cost-effective, as S3 and CloudFront automatically handle traffic and storage needs.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="Resources/helping handa.png" alt="Project Image">
+        <div class="project-description">
+          <h3>Helping Hands</h3>
+          <p>I developed a website called "Helping Hands," aimed at assisting people in need by providing a crowdfunding platform specifically for health-related issues. The site allows individuals to create campaigns for medical expenses, treatments, and surgeries, sharing their personal stories to encourage donations. Users can securely donate via integrated payment systems, and they can track the progress of each campaign. The platform also offers options to share campaigns on social media to reach a wider audience. The website is built with a responsive design, ensuring it works seamlessly on both desktop and mobile devices, making it easy for people to contribute and support those in need.</p>
+        </div>
+      </div>
+      <hr style="border-top: 1px solid #ccc; margin: 1em 0; margin-top: 40px;">
+      <div class="section" id="contacts" style="margin-bottom: 0px;">
+        <h2>Contact Me</h2>
+        <div class="container">
+          <p>I'm continually aiming to collaborate on captivating projects with amazing people. Need some help? I'm all
+            set!</p>
+
+          <div class="form-section">
+            <h2 style="font-size: 21px;">Fill out the form below</h2>
+            <form>
+              <div class="form-row">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+              </div>
+              <textarea placeholder="Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+        <div class="icon-container">
+          <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="icon"><i class="fab fa-github"></i></a>
+          <a href="#" class="icon"><i class="fas fa-envelope"></i></a>
+      </div>
+      </div>
+    </div>
+</body>
+
+</html>
