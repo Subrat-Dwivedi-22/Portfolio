@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #eceff4;
+        }
+        .copy-box {
+            width: 350px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background: linear-gradient(135deg, #ffffff, #f7f9fc);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .header {
+            font-size: 25px;
+            color: #222;
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+        .description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 0px;
+        }
+        .email {
+            font-size: 16px;
+            color: #333;
+            background-color: #f0f0f0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+            word-break: break-word;
+            font-weight: 500;
+        }
+        .copy-btn {
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: #333;
+        }
+        .copy-btn.copied {
+            background: #444;
+            color: #aaa;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <div class="copy-box">
+        <div class="header">Stay in Touch</div>
+        <div class="description">You can reach me via the email below:</div>
+        <div class="email" id="text-to-copy">dwivedisubrat681@gmail.com</div>
+        <button class="copy-btn" id="copy-button" onclick="copyText()">Copy Email</button>
+    </div>
+</body>
+</html>

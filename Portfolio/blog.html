@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development & AWS Blog</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 28px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 15px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #f39c12;
+            border-radius: 5px;
+        }
+
+        /* Main Section */
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .intro h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        .posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .post {
+            background-color: #f5f5f5;
+            padding: 25px;
+            width: 48%;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .post h3 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+
+        .post p {
+            font-size: 16px;
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+
+        .post a {
+            text-decoration: none;
+            color: #f39c12;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        .post a:hover {
+            text-decoration: underline;
+            color: #e67e22;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Web Dev & AWS</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Welcome to My Blog</h2>
+            <p>Here, I share my journey as a web developer and my daily learnings about AWS.</p>
+        </section>
+
+        <section class="posts">
+            <article class="post">
+                <h3>Getting Started with AWS</h3>
+                <p>Learn how to get started with Amazon Web Services, from setting up your account to deploying your first application.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="post">
+                <h3>Building Responsive Websites</h3>
+                <p>Discover the best practices for creating responsive and mobile-friendly websites.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="post">
+                <h3>Introduction to Cloud Computing</h3>
+                <p>Understand the fundamentals of cloud computing and how AWS fits into this evolving landscape.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="post">
+                <h3>Setting Up CI/CD for AWS Deployments</h3>
+                <p>Step-by-step guide on automating deployments using Continuous Integration and Continuous Deployment in AWS.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="post">
+                <h3>JavaScript Best Practices for Frontend Devs</h3>
+                <p>Learn the essential JavaScript best practices that every frontend developer should know to write clean and efficient code.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="post">
+                <h3>Serverless Architecture on AWS</h3>
+                <p>Explore the power of serverless architecture on AWS and how it can reduce costs and increase scalability.</p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Web Dev & AWS Blog | All rights reserved</p>
+    </footer>
+
+</body>
+</html>
